@@ -3,12 +3,14 @@ kind: Service
 metadata:
     labels:
         app: frontend
+    annotations:
+        ingress.kubernetes.io/rewrite-target: /
     name: frontend-svc
 spec:
-    ports:
-    - port: 3000
-      protocol: TCP
-      targetPort: 3000
     selector:
         app: frontend
-    type: ClusterIP
+    ports:
+      - protocol: TCP
+        port: 3000
+        targetPort: 3000
+    type: NodePort
