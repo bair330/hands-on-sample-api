@@ -6,8 +6,6 @@ inspired and update from : https://www.magalix.com/blog/deploying-an-application
 
 ```bash
 cd step1/
-go init sample-api
-go mod tidy
 docker build -t sample-api .
 ```
 
@@ -88,8 +86,7 @@ kubectl create secret generic redis-password --from-literal=redis-password=passw
 
 Note : uncomment and redeploy deployment in step 2, then check its status. You did it!
 
-## Step 6 (Bonus) : Deploy Backend storage (Redis)
-
-## Step 7 (Bonus) : Add HTML Content to the Application
-
+## Step 6 (Bonus) : Add HTML Content to the Application
+## Step 7 (Bonus) : Deploy Backend storage (Redis)
 ## Step 8 (Bonus) : use Helm or kustomize
+
